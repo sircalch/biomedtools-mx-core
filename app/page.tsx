@@ -262,7 +262,6 @@ export default function Home() {
                   activity: "case",
                   caseId: practice.caseId,
                   equipment: practice.equipment,
-                  score: "0",
                 });
 
                 return (
