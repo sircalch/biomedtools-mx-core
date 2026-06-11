@@ -8,6 +8,7 @@ Este directorio contiene documentos base para la Fase 2: validacion humana, pilo
 - [Guia del docente](guia-docente.md)
 - [Encuesta post-uso](encuesta-post-uso.md)
 - [Rubrica para evaluar reporte tecnico](rubrica-reporte-tecnico.md)
+- [Piloto 01: monitoreo de signos vitales / SpO2](piloto-01-monitoreo-spo2.md)
 
 ## Orden recomendado
 
