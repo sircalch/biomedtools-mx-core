@@ -9,6 +9,10 @@ Este directorio contiene documentos base para la Fase 2: validacion humana, pilo
 - [Encuesta post-uso](encuesta-post-uso.md)
 - [Rubrica para evaluar reporte tecnico](rubrica-reporte-tecnico.md)
 - [Piloto 01: monitoreo de signos vitales / SpO2](piloto-01-monitoreo-spo2.md)
+- [Mensaje para alumnos del piloto 01](mensaje-alumnos-piloto-01.md)
+- [Checklist de prueba con 2 a 5 personas](checklist-prueba-confianza.md)
+- [Resumen de resultados del piloto 01](resumen-resultados-piloto-01.md)
+- [Registro CSV de observaciones](registro-observaciones-piloto-01.csv)
 
 ## Orden recomendado
 

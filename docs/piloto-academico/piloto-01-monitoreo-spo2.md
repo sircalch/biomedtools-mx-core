@@ -32,6 +32,18 @@ Validar con un grupo pequeno el flujo educativo de BioMedTools MX Core usando un
 - Encuesta post-uso.
 - Observaciones del docente.
 
+## Antes del piloto formal
+
+Aplicar primero la [checklist de prueba con 2 a 5 personas](checklist-prueba-confianza.md).
+
+## Material para aplicar
+
+- [Mensaje para alumnos](mensaje-alumnos-piloto-01.md)
+- [Encuesta post-uso](encuesta-post-uso.md)
+- [Rubrica para evaluar reporte tecnico](rubrica-reporte-tecnico.md)
+- [Resumen de resultados](resumen-resultados-piloto-01.md)
+- [Registro CSV de observaciones](registro-observaciones-piloto-01.csv)
+
 ## Carpeta sugerida
 
 ```text

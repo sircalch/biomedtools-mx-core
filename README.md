@@ -35,6 +35,8 @@ Los documentos base para validacion humana, actividad piloto y evidencia academi
 - [Encuesta post-uso](docs/piloto-academico/encuesta-post-uso.md)
 - [Rubrica para evaluar reporte tecnico](docs/piloto-academico/rubrica-reporte-tecnico.md)
 - [Piloto 01: monitoreo de signos vitales / SpO2](docs/piloto-academico/piloto-01-monitoreo-spo2.md)
+- [Mensaje para alumnos del piloto 01](docs/piloto-academico/mensaje-alumnos-piloto-01.md)
+- [Resumen de resultados del piloto 01](docs/piloto-academico/resumen-resultados-piloto-01.md)
 
 ## Desarrollo
 
