@@ -26,6 +26,15 @@ Si no se configuran, la app usa esas URLs por defecto.
 2. Practicar: BioMed Case Simulator.
 3. Documentar: Clinical Report Builder.
 
+## Fase 2: piloto academico
+
+Los documentos base para validacion humana, actividad piloto y evidencia academica estan en:
+
+- [Guia del estudiante](docs/piloto-academico/guia-estudiante.md)
+- [Guia del docente](docs/piloto-academico/guia-docente.md)
+- [Encuesta post-uso](docs/piloto-academico/encuesta-post-uso.md)
+- [Rubrica para evaluar reporte tecnico](docs/piloto-academico/rubrica-reporte-tecnico.md)
+
 ## Desarrollo
 
 ```bash
