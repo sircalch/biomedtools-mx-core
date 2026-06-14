@@ -133,10 +133,16 @@ export default function Home() {
             BioMedTools MX Core
           </a>
           <nav className="hidden items-center gap-1 text-xs font-medium md:flex">
-            {["Inicio", "Modulos", "Practicas guiadas", "Recursos"].map((item) => (
+            {[
+              ["Inicio", "#inicio"],
+              ["Modulos", "#modulos"],
+              ["Ruta", "/ruta"],
+              ["Biblioteca", "/biblioteca"],
+              ["Docentes", "/docentes"],
+            ].map(([item, href]) => (
               <a
                 key={item}
-                href={item === "Inicio" ? "#inicio" : item === "Modulos" ? "#modulos" : "#practicas"}
+                href={href}
                 className="rounded-md px-3 py-2 text-blue-100 hover:bg-white/10 hover:text-white"
               >
                 {item}
@@ -290,6 +296,54 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-6">
+          <h2 className="text-base font-semibold text-slate-950">
+            Recursos academicos del Core
+          </h2>
+          <div className="mt-3 grid gap-4 md:grid-cols-3">
+            {[
+              {
+                title: "Ruta de aprendizaje",
+                text: "Secuencias Quiz - Caso - Reporte por tema y nivel.",
+                href: "/ruta",
+                icon: ArrowRight,
+              },
+              {
+                title: "Biblioteca de equipos",
+                text: "Fichas tecnicas educativas con fallas comunes y checklist.",
+                href: "/biblioteca",
+                icon: Stethoscope,
+              },
+              {
+                title: "Para docentes",
+                text: "Actividad piloto, evidencias y rubrica de uso academico.",
+                href: "/docentes",
+                icon: GraduationCap,
+              },
+            ].map((resource) => (
+              <article
+                key={resource.title}
+                className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
+              >
+                <resource.icon className="h-6 w-6 text-blue-700" aria-hidden="true" />
+                <h3 className="mt-4 text-base font-semibold text-slate-950">
+                  {resource.title}
+                </h3>
+                <p className="mt-2 min-h-10 text-sm leading-6 text-slate-600">
+                  {resource.text}
+                </p>
+                <a
+                  href={resource.href}
+                  className="mt-4 inline-flex min-h-9 items-center gap-2 rounded-md border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-800 hover:bg-blue-100"
+                >
+                  Abrir recurso
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
               </article>
             ))}
           </div>
