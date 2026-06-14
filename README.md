@@ -26,6 +26,36 @@ Si no se configuran, la app usa esas URLs por defecto.
 2. Practicar: BioMed Case Simulator.
 3. Documentar: Clinical Report Builder.
 
+## Paginas principales
+
+- `/`: dashboard principal de BioMedTools MX Core.
+- `/actividades`: actividades guiadas listas para clase o piloto.
+- `/ruta`: rutas Quiz - Caso - Reporte por tema.
+- `/biblioteca`: biblioteca educativa de equipos medicos.
+- `/biblioteca/[slug]`: ficha individual por equipo.
+- `/docentes`: guia breve para actividad piloto docente.
+- `/evidencia-piloto`: estructura para guardar evidencia de validacion.
+- `/acerca`: autor, enfoque y proposito educativo.
+- `/aviso-educativo`: alcance, privacidad y limitaciones de uso.
+- `/proyectos`: roadmap de proyectos recomendados.
+
+## Fichas de equipo incluidas
+
+- Monitor multiparametrico.
+- Bomba de infusion.
+- Desfibrilador.
+- Autoclave.
+- Electrocardiografo.
+- Incubadora / cuna termica.
+
+## Roadmap recomendado
+
+- MedTech Atlas Edu.
+- Electrical Safety Trainer.
+- SafeCheck Health.
+- Maintenance Planner Lite.
+- Biomedical Calculators Edu.
+
 ## Fase 2: piloto academico
 
 Los documentos base para validacion humana, actividad piloto y evidencia academica estan en:

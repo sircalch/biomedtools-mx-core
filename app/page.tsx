@@ -105,9 +105,9 @@ const audience = [
 ];
 
 const activityLog = [
-  ["Quiz - Monitoreo", "Puntaje: 80% · Hoy, 10:45"],
-  ["Caso - Monitor sin SpO2", "Resultado: Completado · Hoy, 11:15"],
-  ["Reporte - Correctivo", "PDF generado · Hoy, 11:28"],
+  ["Quiz - Monitoreo", "Puntaje: 80% - Hoy, 10:45"],
+  ["Caso - Monitor sin SpO2", "Resultado: Completado - Hoy, 11:15"],
+  ["Reporte - Correctivo", "PDF generado - Hoy, 11:28"],
 ];
 
 const accentClass: Record<string, string> = {
@@ -136,9 +136,11 @@ export default function Home() {
             {[
               ["Inicio", "#inicio"],
               ["Modulos", "#modulos"],
+              ["Actividades", "/actividades"],
               ["Ruta", "/ruta"],
               ["Biblioteca", "/biblioteca"],
               ["Docentes", "/docentes"],
+              ["Acerca", "/acerca"],
             ].map(([item, href]) => (
               <a
                 key={item}
@@ -308,6 +310,12 @@ export default function Home() {
           <div className="mt-3 grid gap-4 md:grid-cols-3">
             {[
               {
+                title: "Actividades guiadas",
+                text: "Flujos listos para clase: quiz, caso y reporte.",
+                href: "/actividades",
+                icon: ClipboardCheck,
+              },
+              {
                 title: "Ruta de aprendizaje",
                 text: "Secuencias Quiz - Caso - Reporte por tema y nivel.",
                 href: "/ruta",
@@ -324,6 +332,24 @@ export default function Home() {
                 text: "Actividad piloto, evidencias y rubrica de uso academico.",
                 href: "/docentes",
                 icon: GraduationCap,
+              },
+              {
+                title: "Evidencia piloto",
+                text: "Organiza capturas, resultados, reportes y observaciones.",
+                href: "/evidencia-piloto",
+                icon: FileText,
+              },
+              {
+                title: "Acerca y aviso",
+                text: "Autor, alcance educativo, privacidad y uso responsable.",
+                href: "/acerca",
+                icon: ShieldCheck,
+              },
+              {
+                title: "Proyectos recomendados",
+                text: "Roadmap para nuevos modulos de BioMedTools MX.",
+                href: "/proyectos",
+                icon: Wrench,
               },
             ].map((resource) => (
               <article

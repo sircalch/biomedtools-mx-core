@@ -39,6 +39,7 @@ function buildUrl(base: string, path = "/", params?: Record<string, string>) {
 
 const equipment = [
   {
+    slug: "monitor-multiparametrico",
     name: "Monitor multiparametrico",
     category: "Monitoreo",
     icon: Activity,
@@ -47,6 +48,7 @@ const equipment = [
     commonIssues: ["Sensor SpO2 sin lectura", "Cable o conector danado", "Configuracion o alarma no documentada"],
   },
   {
+    slug: "bomba-infusion",
     name: "Bomba de infusion",
     category: "Terapia",
     icon: FlaskConical,
@@ -55,6 +57,7 @@ const equipment = [
     commonIssues: ["Alarma de oclusion", "Linea mal colocada", "Bateria o flujo no verificado"],
   },
   {
+    slug: "desfibrilador",
     name: "Desfibrilador",
     category: "Urgencias",
     icon: ShieldCheck,
@@ -63,6 +66,7 @@ const equipment = [
     commonIssues: ["No carga energia", "Accesorios incompletos", "Bateria o autoprueba pendiente"],
   },
   {
+    slug: "autoclave",
     name: "Autoclave",
     category: "Esterilizacion",
     icon: ClipboardCheck,
@@ -71,6 +75,7 @@ const equipment = [
     commonIssues: ["Ciclo incompleto", "Sello o puerta con fuga", "Registro de ciclo incompleto"],
   },
   {
+    slug: "electrocardiografo",
     name: "Electrocardiografo",
     category: "Diagnostico",
     icon: Zap,
@@ -79,6 +84,7 @@ const equipment = [
     commonIssues: ["Ruido en senal", "Electrodos/cables", "Configuracion de derivaciones"],
   },
   {
+    slug: "incubadora-cuna-termica",
     name: "Incubadora / cuna termica",
     category: "Soporte neonatal",
     icon: ThermometerSun,
@@ -117,6 +123,9 @@ export default function EquipmentLibraryPage() {
             BioMedTools MX Core
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs font-medium">
+            <Link href="/actividades" className="rounded-md px-3 py-2 text-blue-100 hover:bg-white/10 hover:text-white">
+              Actividades
+            </Link>
             <Link href="/ruta" className="rounded-md px-3 py-2 text-blue-100 hover:bg-white/10 hover:text-white">
               Ruta
             </Link>
@@ -188,6 +197,13 @@ export default function EquipmentLibraryPage() {
                       </li>
                     ))}
                   </ul>
+                  <Link
+                    href={`/biblioteca/${item.slug}`}
+                    className="mt-4 inline-flex min-h-8 items-center gap-2 rounded-md border border-blue-200 bg-blue-50 px-3 py-1.5 text-xs font-semibold text-blue-800 hover:bg-blue-100"
+                  >
+                    Ver ficha
+                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                  </Link>
                 </article>
               ))}
             </div>
@@ -243,6 +259,10 @@ export default function EquipmentLibraryPage() {
                   Caso relacionado
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
+                <Link href={`/biblioteca/${featured.slug}`} className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 sm:col-span-2">
+                  Abrir ficha completa
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
               </section>
             </div>
           </aside>
