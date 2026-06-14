@@ -13,6 +13,7 @@ import {
   Users,
   Wrench,
 } from "lucide-react";
+import Image from "next/image";
 
 const CASE_SIMULATOR_URL =
   process.env.NEXT_PUBLIC_CASE_SIMULATOR_URL ||
@@ -426,6 +427,36 @@ export default function Home() {
           institucionales, supervision profesional ni mantenimiento biomedico
           certificado.
         </section>
+
+        <footer className="mb-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-5">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/topic-tales-biomedica-logo.png"
+                alt="Topic Tales Biomedica"
+                width={140}
+                height={98}
+                className="h-14 w-auto object-contain"
+                priority
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  Desarrollado por
+                </p>
+                <p className="text-sm font-semibold text-slate-950">
+                  Ing. Andres Monreal
+                </p>
+                <p className="text-xs text-slate-600">
+                  Ingeniero Biomedico / Topic Tales Biomedica
+                </p>
+              </div>
+            </div>
+            <p className="max-w-md text-xs leading-5 text-slate-500">
+              BioMedTools MX Core para uso academico, simulacion educativa y
+              documentacion tecnica formativa.
+            </p>
+          </div>
+        </footer>
       </main>
     </div>
   );
