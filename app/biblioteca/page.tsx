@@ -164,6 +164,16 @@ export default function EquipmentLibraryPage() {
                 Antes del caso, revisa la ficha del equipo. Despues del caso,
                 documenta hallazgos con Report Builder.
               </p>
+              <div className="mt-5 overflow-hidden rounded-lg border border-blue-100 bg-white shadow-sm">
+                <Image
+                  src="/biomed-equipment-atlas.png"
+                  alt="Atlas visual de equipos medicos educativos"
+                  width={960}
+                  height={600}
+                  className="aspect-[16/9] w-full object-cover"
+                  priority
+                />
+              </div>
             </aside>
           </div>
         </section>

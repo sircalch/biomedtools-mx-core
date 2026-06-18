@@ -45,3 +45,21 @@ html {
   background: #bfdbfe;
   color: #172554;
 }
+
+.core-content > div > .min-h-screen > header {
+  display: none;
+}
+
+.core-content > div > .min-h-screen > main > footer {
+  display: none;
+}
+
+.core-content > div > .min-h-screen > main {
+  max-width: 92rem;
+}
+
+@media (max-width: 1023px) {
+  .core-content > div > .min-h-screen > main {
+    padding-top: 1rem;
+  }
+}

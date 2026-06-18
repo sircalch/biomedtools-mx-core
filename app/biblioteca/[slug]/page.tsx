@@ -39,6 +39,15 @@ const iconBySlug: Record<string, typeof Stethoscope> = {
   "incubadora-cuna-termica": ThermometerSun,
 };
 
+const imagePositionBySlug: Record<string, string> = {
+  "monitor-multiparametrico": "0% 0%",
+  "bomba-infusion": "50% 0%",
+  desfibrilador: "100% 0%",
+  autoclave: "0% 100%",
+  electrocardiografo: "50% 100%",
+  "incubadora-cuna-termica": "100% 100%",
+};
+
 export function generateStaticParams() {
   return equipmentProfiles.map((item) => ({ slug: item.slug }));
 }
@@ -111,7 +120,7 @@ export default async function EquipmentProfilePage({
 
       <main className="mx-auto w-full max-w-7xl px-4 py-6 md:px-6">
         <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-[0_18px_55px_rgba(15,23,42,0.12)] md:p-7">
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_0.65fr]">
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_0.7fr]">
             <div>
               <div className="flex items-start gap-4">
                 <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-slate-950 text-white">
@@ -129,6 +138,19 @@ export default async function EquipmentProfilePage({
               <p className="mt-5 max-w-3xl text-base leading-7 text-slate-600">
                 {profile.summary}
               </p>
+              <div
+                aria-label={`Imagen educativa de ${profile.name}`}
+                className="mt-6 h-64 overflow-hidden rounded-lg border border-slate-200 bg-blue-50 bg-no-repeat shadow-sm sm:h-80"
+                role="img"
+                style={{
+                  backgroundImage: "url('/biomed-equipment-atlas.png')",
+                  backgroundPosition:
+                    imagePositionBySlug[profile.slug] || "50% 50%",
+                  backgroundSize: "300% 200%",
+                }}
+              >
+                <span className="sr-only">{profile.name}</span>
+              </div>
             </div>
 
             <aside className="rounded-lg border border-blue-100 bg-blue-50 p-5">
