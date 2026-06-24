@@ -3,9 +3,11 @@
 import {
   Activity,
   ClipboardCheck,
+  Compass,
   Database,
   FileText,
   GraduationCap,
+  History,
   Home,
   Info,
   Layers,
@@ -24,7 +26,9 @@ const navItems = [
   { label: "Modulos", href: "/#modulos", icon: Layers },
   { label: "Actividades", href: "/actividades", icon: ClipboardCheck },
   { label: "Biblioteca", href: "/biblioteca", icon: Database },
+  { label: "Atlas", href: "/atlas", icon: Compass },
   { label: "Ruta", href: "/ruta", icon: Map },
+  { label: "Historial", href: "/historial", icon: History },
   { label: "Evidencia", href: "/evidencia-piloto", icon: FileText },
   { label: "Proyectos", href: "/proyectos", icon: Wrench },
   { label: "Docentes", href: "/docentes", icon: GraduationCap },
@@ -181,7 +185,9 @@ export function CoreShell({ children }: { children: ReactNode }) {
                 <div className="mt-2 grid gap-1 text-blue-200">
                   <Link href="/actividades">Actividades</Link>
                   <Link href="/biblioteca">Biblioteca</Link>
+                  <Link href="/atlas">Atlas</Link>
                   <Link href="/ruta">Ruta</Link>
+                  <Link href="/historial">Historial</Link>
                 </div>
               </div>
               <div>

@@ -33,6 +33,8 @@ Si no se configuran, la app usa esas URLs por defecto.
 - `/ruta`: rutas Quiz - Caso - Reporte por tema.
 - `/biblioteca`: biblioteca educativa de equipos medicos.
 - `/biblioteca/[slug]`: ficha individual por equipo.
+- `/atlas`: MedTech Atlas Edu con busqueda, fichas, checklists y enlaces a Quiz/Case/Report.
+- `/historial`: historial local, registro manual de evidencia y exportacion JSON.
 - `/docentes`: guia breve para actividad piloto docente.
 - `/evidencia-piloto`: estructura para guardar evidencia de validacion.
 - `/acerca`: autor, enfoque y proposito educativo.
@@ -50,7 +52,7 @@ Si no se configuran, la app usa esas URLs por defecto.
 
 ## Roadmap recomendado
 
-- MedTech Atlas Edu.
+- MedTech Atlas Edu: activo dentro de `/atlas`.
 - Electrical Safety Trainer.
 - SafeCheck Health.
 - Maintenance Planner Lite.

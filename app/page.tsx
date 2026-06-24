@@ -328,6 +328,18 @@ export default function Home() {
                 icon: Stethoscope,
               },
               {
+                title: "MedTech Atlas Edu",
+                text: "Explorador de equipos, fallas, checklists y rutas conectadas.",
+                href: "/atlas",
+                icon: BookOpenCheck,
+              },
+              {
+                title: "Historial local",
+                text: "Avance, notas y exportacion de evidencia para piloto.",
+                href: "/historial",
+                icon: FileText,
+              },
+              {
                 title: "Para docentes",
                 text: "Actividad piloto, evidencias y rubrica de uso academico.",
                 href: "/docentes",

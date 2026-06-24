@@ -126,6 +126,15 @@ export default function ProjectsPage() {
                   <p className="mt-4 text-sm leading-6 text-slate-600">
                     {project.purpose}
                   </p>
+                  {project.slug === "medtech-atlas-edu" ? (
+                    <Link
+                      href="/atlas"
+                      className="mt-4 inline-flex min-h-9 items-center gap-2 rounded-md bg-blue-700 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-800"
+                    >
+                      Abrir modulo activo
+                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </Link>
+                  ) : null}
                 </article>
               );
             })}

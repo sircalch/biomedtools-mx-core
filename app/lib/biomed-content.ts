@@ -296,9 +296,9 @@ export const futureProjects = [
   {
     slug: "medtech-atlas-edu",
     name: "MedTech Atlas Edu",
-    status: "Diseno recomendado",
+    status: "Activo en Core",
     purpose:
-      "Enciclopedia visual educativa de equipos medicos, fichas, partes, fallas comunes y rutas relacionadas.",
+      "Atlas educativo de equipos medicos, fichas, fallas comunes, checklist y rutas relacionadas.",
   },
   {
     slug: "electrical-safety-trainer",
