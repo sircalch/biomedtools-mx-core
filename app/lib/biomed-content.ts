@@ -122,7 +122,7 @@ export const equipmentProfiles = [
     category: "Esterilizacion",
     quizCategory: "esterilizacion-autoclave",
     caseCategory: "esterilizacion-autoclave",
-    caseId: "autoclave-ciclo-incompleto",
+    caseId: "autoclave-sin-presion",
     reportEquipment: "Autoclave",
     summary:
       "Equipo de esterilizacion asociado a ciclos, carga, sellos, temperatura, presion y registro. El enfoque es documentar observaciones tecnicas iniciales.",
@@ -184,7 +184,7 @@ export const equipmentProfiles = [
     category: "Soporte neonatal",
     quizCategory: "equipos-medicos-basicos",
     caseCategory: "ingenieria-clinica-mantenimiento",
-    caseId: "seguridad-electrica-basica",
+    caseId: "incubadora-temp-inestable",
     reportEquipment: "Incubadora neonatal",
     summary:
       "Equipo de soporte neonatal con control termico, alarmas, sensores y mantenimiento preventivo. La ficha es introductoria y educativa.",
@@ -273,7 +273,7 @@ export const guidedActivities = [
   },
   {
     slug: "autoclave-ciclo-incompleto",
-    title: "Autoclave con ciclo incompleto",
+    title: "Autoclave no alcanza presion objetivo",
     duration: "40 min",
     level: "Basico",
     equipmentSlug: "autoclave",
@@ -281,7 +281,7 @@ export const guidedActivities = [
       "Ordenar datos de ciclo, alarma, carga y registro sin validar esterilidad.",
     flow: [
       "Quiz de esterilizacion y autoclave.",
-      "Caso o discusion guiada sobre ciclo incompleto.",
+      "Caso simulado sobre presion objetivo y sello de puerta.",
       "Reporte con observaciones y seguimiento.",
     ],
     evidence: [
