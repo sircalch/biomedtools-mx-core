@@ -70,6 +70,13 @@ Los documentos base para validacion humana, actividad piloto y evidencia academi
 - [Mensaje para alumnos del piloto 01](docs/piloto-academico/mensaje-alumnos-piloto-01.md)
 - [Resumen de resultados del piloto 01](docs/piloto-academico/resumen-resultados-piloto-01.md)
 
+## Recursos visuales
+
+- Iconografia tecnica: Lucide React.
+- Iconos de salud incluidos en `public/assets/health-icons`: Health Icons.
+- Referencias visuales abiertas consultadas: Bioicons, Health Icons y NIH BioArt.
+- Atlas de equipos: asset local de BioMedTools MX para mantener consistencia entre modulos.
+
 ## Desarrollo
 
 ```bash

@@ -190,33 +190,39 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="self-start rounded-lg border border-blue-100 bg-gradient-to-br from-blue-50 to-white p-5">
-              <div className="relative min-h-56 overflow-hidden rounded-md border border-blue-100 bg-white">
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(37,99,235,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(37,99,235,0.08)_1px,transparent_1px)] bg-[size:34px_34px]" />
-                <div className="absolute left-6 top-10 h-14 w-28 rounded-md border-2 border-blue-300">
-                  <Activity className="absolute left-4 top-4 h-8 w-8 text-blue-500" aria-hidden="true" />
-                  <div className="absolute right-3 top-3 h-2 w-8 rounded bg-blue-200" />
-                  <div className="absolute right-3 top-7 h-2 w-8 rounded bg-blue-100" />
+            <div className="self-start rounded-lg border border-blue-100 bg-gradient-to-br from-white via-blue-50 to-cyan-50 p-4 shadow-sm">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-blue-100 bg-white">
+                <Image
+                  src="/biomed-equipment-atlas.png"
+                  alt="Atlas visual de equipos biomedicos"
+                  fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-blue-950/80 to-transparent p-4 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-cyan-100">
+                    Ecosistema BioMedTools MX
+                  </p>
+                  <p className="mt-1 text-lg font-semibold">
+                    Equipos, decisiones tecnicas y evidencia en un solo flujo.
+                  </p>
                 </div>
-                <div className="absolute left-44 top-20 h-20 w-28 rounded-lg border-2 border-blue-400 bg-blue-50">
-                  <div className="mx-auto mt-4 h-9 w-16 rounded border border-blue-300 bg-blue-950">
-                    <Activity className="mx-auto mt-2 h-5 w-8 text-cyan-200" aria-hidden="true" />
+              </div>
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                {[
+                  ["/assets/health-icons/chart-line.svg", "Quiz"],
+                  ["/assets/health-icons/defibrillator.svg", "Caso"],
+                  ["/assets/health-icons/spreadsheets.svg", "Reporte"],
+                ].map(([src, label]) => (
+                  <div
+                    key={label}
+                    className="flex min-h-16 items-center gap-3 rounded-md border border-blue-100 bg-white px-3 py-2 shadow-sm"
+                  >
+                    <Image src={src} alt="" width={30} height={30} aria-hidden="true" />
+                    <span className="text-xs font-semibold text-blue-950">{label}</span>
                   </div>
-                  <div className="mx-auto mt-2 flex w-20 justify-between">
-                    <span className="h-2 w-2 rounded-full bg-blue-300" />
-                    <span className="h-2 w-2 rounded-full bg-blue-300" />
-                    <span className="h-2 w-2 rounded-full bg-blue-300" />
-                  </div>
-                </div>
-                <div className="absolute right-16 top-10 h-24 w-16 rounded-full border-2 border-blue-300" />
-                <div className="absolute right-20 top-28 h-20 w-10 rounded-b-full border-b-2 border-l-2 border-r-2 border-blue-300" />
-                <div className="absolute bottom-7 left-10 right-10 grid grid-cols-3 gap-3">
-                  {["Quiz", "Caso", "Reporte"].map((item) => (
-                    <div key={item} className="rounded-md border border-blue-100 bg-white/90 px-3 py-2 text-xs font-semibold text-blue-900 shadow-sm">
-                      {item}
-                    </div>
-                  ))}
-                </div>
+                ))}
               </div>
             </div>
           </div>
