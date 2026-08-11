@@ -13,6 +13,7 @@ Presentar BioMedTools MX Core como una plataforma de aprendizaje, simulacion y d
 ## Variables de entorno
 
 ```env
+NEXT_PUBLIC_SITE_URL=https://biomedtools-mx-core.vercel.app
 NEXT_PUBLIC_CASE_SIMULATOR_URL=https://biomed-case-simulator.vercel.app
 NEXT_PUBLIC_QUIZ_ARENA_URL=https://biomed-quiz-arena.vercel.app
 NEXT_PUBLIC_REPORT_BUILDER_URL=https://clinical-report-builder.vercel.app
@@ -76,6 +77,13 @@ Los documentos base para validacion humana, actividad piloto y evidencia academi
 - Iconos de salud incluidos en `public/assets/health-icons`: Health Icons.
 - Referencias visuales abiertas consultadas: Bioicons, Health Icons y NIH BioArt.
 - Atlas de equipos: asset local de BioMedTools MX para mantener consistencia entre modulos.
+
+## Calidad del repositorio
+
+- CI en GitHub Actions: `npm ci`, `npm run lint`, `npm run build` y `npm audit --audit-level=high`.
+- Variables documentadas en `.env.example`.
+- Politica de seguridad en `SECURITY.md`.
+- Metadata Open Graph/Twitter configurada para enlaces compartidos.
 
 ## Desarrollo
 
