@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   ArrowRight,
   BookOpenCheck,
+  Boxes,
   BrainCircuit,
   ClipboardCheck,
   FileText,
@@ -13,6 +14,7 @@ import Link from "next/link";
 
 import {
   buildUrl,
+  BIOMED_3D_LAB_URL,
   CASE_SIMULATOR_URL,
   equipmentProfiles,
   guidedActivities,
@@ -33,12 +35,17 @@ const steps = [
     icon: BookOpenCheck,
   },
   {
-    title: "2. Simulacion",
+    title: "2. Exploracion 3D",
+    text: "Identificar sensores, modulos, riesgos y puntos de verificacion.",
+    icon: Boxes,
+  },
+  {
+    title: "3. Simulacion",
     text: "Resolver un caso tecnico-educativo con decisiones justificadas.",
     icon: BrainCircuit,
   },
   {
-    title: "3. Evidencia",
+    title: "4. Evidencia",
     text: "Documentar hallazgos y recomendaciones en reporte tecnico.",
     icon: FileText,
   },
@@ -136,6 +143,10 @@ export default function GuidedActivitiesPage() {
             const caseUrl = buildUrl(CASE_SIMULATOR_URL, "/", {
               category: equipment?.caseCategory || "monitoreo-signos-vitales",
             });
+            const labUrl = buildUrl(BIOMED_3D_LAB_URL, "/", {
+              category: equipment?.quizCategory || "monitoreo-signos-vitales",
+              equipment: equipment?.equipment3d || activity.equipmentSlug,
+            });
             const reportUrl = buildUrl(REPORT_BUILDER_URL, "/", {
               activity: "guided",
               caseId: equipment?.caseId || activity.slug,
@@ -212,9 +223,12 @@ export default function GuidedActivitiesPage() {
                   </div>
                 </div>
 
-                <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
                   <a href={quizUrl} className="rounded-md border border-blue-200 bg-blue-50 px-3 py-3 text-sm font-semibold text-blue-800 hover:bg-blue-100">
                     Abrir quiz
+                  </a>
+                  <a href={labUrl} className="rounded-md border border-blue-200 bg-white px-3 py-3 text-sm font-semibold text-blue-800 hover:bg-blue-50">
+                    Explorar 3D
                   </a>
                   <a href={caseUrl} className="rounded-md border border-cyan-200 bg-cyan-50 px-3 py-3 text-sm font-semibold text-cyan-800 hover:bg-cyan-100">
                     Abrir caso

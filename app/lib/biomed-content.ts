@@ -33,6 +33,7 @@ export const equipmentProfiles = [
     quizCategory: "monitoreo-signos-vitales",
     caseCategory: "monitoreo-signos-vitales",
     caseId: "monitor-sin-spo2",
+    equipment3d: "patient-monitor",
     reportEquipment: "Monitor multiparametrico",
     summary:
       "Equipo usado para visualizar parametros, alarmas y tendencias. En BioMedTools se trabaja desde verificacion tecnica inicial y documentacion formativa.",
@@ -64,6 +65,7 @@ export const equipmentProfiles = [
     quizCategory: "bombas-infusion-terapia",
     caseCategory: "bombas-infusion-terapia",
     caseId: "bomba-oclusion",
+    equipment3d: "infusion-pump",
     reportEquipment: "Bomba volumetrica",
     summary:
       "Equipo de terapia con alarmas relacionadas con linea, presion, configuracion y accesorios. El entrenamiento se enfoca en verificacion tecnica segura.",
@@ -95,6 +97,7 @@ export const equipmentProfiles = [
     quizCategory: "desfibrilador-urgencias",
     caseCategory: "desfibrilador-urgencias",
     caseId: "desfibrilador-no-carga",
+    equipment3d: "defibrillator",
     reportEquipment: "Desfibrilador",
     summary:
       "Equipo critico que requiere revision de energia, accesorios, autoprueba y disponibilidad. El enfoque es tecnico-educativo y de escalamiento responsable.",
@@ -126,6 +129,7 @@ export const equipmentProfiles = [
     quizCategory: "esterilizacion-autoclave",
     caseCategory: "esterilizacion-autoclave",
     caseId: "autoclave-sin-presion",
+    equipment3d: "autoclave",
     reportEquipment: "Autoclave",
     summary:
       "Equipo de esterilizacion asociado a ciclos, carga, sellos, temperatura, presion y registro. El enfoque es documentar observaciones tecnicas iniciales.",
@@ -157,6 +161,7 @@ export const equipmentProfiles = [
     quizCategory: "equipos-medicos-basicos",
     caseCategory: "monitoreo-signos-vitales",
     caseId: "monitor-sin-spo2",
+    equipment3d: "patient-monitor",
     reportEquipment: "Electrocardiografo",
     summary:
       "Equipo de diagnostico para registro de senales electricas cardiacas. La ficha se centra en accesorios, ruido, derivaciones y documentacion tecnica.",
@@ -188,6 +193,7 @@ export const equipmentProfiles = [
     quizCategory: "equipos-medicos-basicos",
     caseCategory: "ingenieria-clinica-mantenimiento",
     caseId: "incubadora-temp-inestable",
+    equipment3d: "neonatal-incubator",
     reportEquipment: "Incubadora neonatal",
     summary:
       "Equipo de soporte neonatal con control termico, alarmas, sensores y mantenimiento preventivo. La ficha es introductoria y educativa.",
@@ -227,6 +233,7 @@ export const guidedActivities = [
       "Practicar una verificacion tecnica inicial de monitoreo y generar evidencia de actividad.",
     flow: [
       "Quiz de monitoreo de signos vitales.",
+      "Exploracion 3D de monitor multiparametrico.",
       "Caso simulado Monitor sin lectura de SpO2.",
       "Reporte correctivo con hallazgos y recomendacion.",
     ],
@@ -246,6 +253,7 @@ export const guidedActivities = [
       "Relacionar alarma, linea, configuracion y documentacion tecnica sin asumir falla interna.",
     flow: [
       "Quiz de bombas de infusion y terapia.",
+      "Exploracion 3D de bomba volumetrica.",
       "Caso simulado de oclusion.",
       "Reporte tecnico de verificacion inicial.",
     ],
@@ -265,6 +273,7 @@ export const guidedActivities = [
       "Reconocer prioridad tecnica, accesorios, energia y escalamiento de un equipo critico.",
     flow: [
       "Quiz de desfibrilador y urgencias.",
+      "Exploracion 3D de desfibrilador monitor.",
       "Caso simulado de no carga.",
       "Reporte con evidencia y recomendacion de escalamiento.",
     ],
@@ -284,6 +293,7 @@ export const guidedActivities = [
       "Ordenar datos de ciclo, alarma, carga y registro sin validar esterilidad.",
     flow: [
       "Quiz de esterilizacion y autoclave.",
+      "Exploracion 3D de autoclave hospitalario.",
       "Caso simulado sobre presion objetivo y sello de puerta.",
       "Reporte con observaciones y seguimiento.",
     ],

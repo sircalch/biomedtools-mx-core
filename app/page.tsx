@@ -81,6 +81,7 @@ const practices = [
     category: "monitoreo-signos-vitales",
     caseId: "monitor-sin-spo2",
     equipment: "Monitor multiparametrico",
+    equipment3d: "patient-monitor",
     icon: Activity,
   },
   {
@@ -88,6 +89,7 @@ const practices = [
     category: "bombas-infusion-terapia",
     caseId: "bomba-oclusion",
     equipment: "Bomba volumetrica",
+    equipment3d: "infusion-pump",
     icon: FlaskConical,
   },
   {
@@ -95,6 +97,7 @@ const practices = [
     category: "desfibrilador-urgencias",
     caseId: "desfibrilador-no-carga",
     equipment: "Desfibrilador",
+    equipment3d: "defibrillator",
     icon: ShieldCheck,
   },
 ];
@@ -246,9 +249,10 @@ export default function Home() {
               <h2 className="text-sm font-semibold text-slate-950">
                 Flujo de aprendizaje
               </h2>
-              <div className="mt-3 grid gap-3 md:grid-cols-3">
+              <div className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
                 {[
                   { label: "Estudiar", text: "Refuerza conceptos con quizzes por categoria.", icon: BookOpenCheck },
+                  { label: "Explorar", text: "Ubica subsistemas y riesgos en equipos 3D.", icon: Box },
                   { label: "Practicar", text: "Resuelve casos clinico-tecnicos simulados.", icon: BrainCircuit },
                   { label: "Documentar", text: "Genera reportes tecnicos biomedicos.", icon: FileText },
                 ].map((item, index) => (
@@ -447,6 +451,10 @@ export default function Home() {
               const caseUrl = buildUrl(CASE_SIMULATOR_URL, "/", {
                 category: practice.category,
               });
+              const labUrl = buildUrl(BIOMED_3D_LAB_URL, "/", {
+                category: practice.category,
+                equipment: practice.equipment3d,
+              });
               const reportUrl = buildUrl(REPORT_BUILDER_URL, "/", {
                 activity: "case",
                 caseId: practice.caseId,
@@ -466,9 +474,12 @@ export default function Home() {
                       <p className="text-xs text-slate-500">Flujo recomendado para actividad piloto.</p>
                     </div>
                   </div>
-                  <div className="grid gap-2 sm:grid-cols-3">
+                  <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
                     <a href={quizUrl} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-blue-50">
                       Quiz de repaso
+                    </a>
+                    <a href={labUrl} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-cyan-50">
+                      Equipo 3D
                     </a>
                     <a href={caseUrl} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-cyan-50">
                       Caso simulado

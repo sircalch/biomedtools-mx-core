@@ -1,6 +1,6 @@
 # BioMedTools MX Core
 
-Landing integradora para conectar tres herramientas educativas:
+Landing integradora para conectar las herramientas educativas del ecosistema:
 
 - BioMed Quiz Arena
 - BioMed Case Simulator
@@ -26,17 +26,18 @@ Si no se configuran, la app usa esas URLs por defecto.
 ## Flujo educativo
 
 1. Estudiar: BioMed Quiz Arena.
-2. Practicar: BioMed Case Simulator.
-3. Documentar: Clinical Report Builder.
+2. Explorar: BioMed 3D Engineering Lab.
+3. Practicar: BioMed Case Simulator.
+4. Documentar: Clinical Report Builder.
 
 ## Paginas principales
 
 - `/`: dashboard principal de BioMedTools MX Core.
 - `/actividades`: actividades guiadas listas para clase o piloto.
-- `/ruta`: rutas Quiz - Caso - Reporte por tema.
+- `/ruta`: rutas Quiz - 3D - Caso - Reporte por tema.
 - `/biblioteca`: biblioteca educativa de equipos medicos.
 - `/biblioteca/[slug]`: ficha individual por equipo.
-- `/atlas`: MedTech Atlas Edu con busqueda, fichas, checklists y enlaces a Quiz/Case/Report.
+- `/atlas`: MedTech Atlas Edu con busqueda, fichas, checklists y enlaces a Quiz/3D/Case/Report.
 - `/recursos`: recursos abiertos, fuentes oficiales y notas de licencia para el ecosistema.
 - `/historial`: historial local, registro manual de evidencia y exportacion JSON.
 - `/docentes`: guia breve para actividad piloto docente.

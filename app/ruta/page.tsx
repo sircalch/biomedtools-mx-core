@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Activity, ClipboardCheck, FileText, GraduationCap } from "lucide-react";
+import { Activity, Boxes, ClipboardCheck, FileText, GraduationCap } from "lucide-react";
 
 import { GuidedRoutePlanner } from "@/app/components/GuidedRoutePlanner";
 
 export const metadata: Metadata = {
   title: "Ruta de aprendizaje | BioMedTools MX Core",
   description:
-    "Ruta guiada interactiva Quiz - Caso - Reporte para actividades de Ingenieria Biomedica.",
+    "Ruta guiada interactiva Quiz - 3D - Caso - Reporte para actividades de Ingenieria Biomedica.",
 };
 
 const summary = [
@@ -15,6 +15,12 @@ const summary = [
     value: "Quiz",
     detail: "Pretest, estudio o repaso por categoria.",
     icon: Activity,
+  },
+  {
+    label: "Visual",
+    value: "3D",
+    detail: "Exploracion de subsistemas y puntos de verificacion.",
+    icon: Boxes,
   },
   {
     label: "Practica",
@@ -39,7 +45,7 @@ const summary = [
 export default function LearningRoutePage() {
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-6 md:px-6">
-      <section className="mb-6 grid gap-4 md:grid-cols-4">
+      <section className="mb-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {summary.map((item) => (
           <article
             key={item.label}

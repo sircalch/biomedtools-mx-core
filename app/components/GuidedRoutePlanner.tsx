@@ -3,6 +3,7 @@
 import {
   ArrowRight,
   BookOpenCheck,
+  Boxes,
   CheckCircle2,
   ClipboardCheck,
   FileText,
@@ -15,6 +16,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import {
   CASE_SIMULATOR_URL,
+  BIOMED_3D_LAB_URL,
   QUIZ_ARENA_URL,
   REPORT_BUILDER_URL,
   buildUrl,
@@ -23,12 +25,13 @@ import {
 } from "@/app/lib/biomed-content";
 
 type ActivitySlug = (typeof guidedActivities)[number]["slug"];
-type StepKey = "pretest" | "case" | "report" | "evidence" | "reflection";
+type StepKey = "pretest" | "lab3d" | "case" | "report" | "evidence" | "reflection";
 
 const STORAGE_KEY = "biomedtools-core:guided-route:v2";
 
 const stepLabels: Record<StepKey, string> = {
   pretest: "Pretest / repaso",
+  lab3d: "Exploracion 3D",
   case: "Caso simulado",
   report: "Reporte tecnico",
   evidence: "Evidencia",
@@ -37,6 +40,7 @@ const stepLabels: Record<StepKey, string> = {
 
 const stepDescriptions: Record<StepKey, string> = {
   pretest: "Resolver quiz por categoria para activar conceptos clave.",
+  lab3d: "Ubicar sensores, modulos, riesgos y puntos de verificacion del equipo.",
   case: "Aplicar razonamiento tecnico en un escenario simulado.",
   report: "Documentar falla, diagnostico, acciones y recomendaciones.",
   evidence: "Guardar capturas, PDF y observaciones de la actividad.",
@@ -45,6 +49,7 @@ const stepDescriptions: Record<StepKey, string> = {
 
 const stepIcons: Record<StepKey, typeof BookOpenCheck> = {
   pretest: BookOpenCheck,
+  lab3d: Boxes,
   case: ShieldCheck,
   report: FileText,
   evidence: ClipboardCheck,
@@ -86,7 +91,8 @@ export function GuidedRoutePlanner() {
   );
   const equipment = getEquipmentBySlug(activity.equipmentSlug);
   const completedSteps = progress[activity.slug] ?? [];
-  const completionPercent = Math.round((completedSteps.length / 5) * 100);
+  const totalSteps = Object.keys(stepLabels).length;
+  const completionPercent = Math.round((completedSteps.length / totalSteps) * 100);
 
   const quizUrl = buildUrl(QUIZ_ARENA_URL, `/quiz/${equipment?.quizCategory ?? ""}`, {
     mode: "study",
@@ -105,9 +111,14 @@ export function GuidedRoutePlanner() {
     caseTitle: activity.title,
     equipment: equipment?.reportEquipment ?? activity.title,
   });
+  const labUrl = buildUrl(BIOMED_3D_LAB_URL, "/", {
+    category: equipment?.quizCategory ?? activity.slug,
+    equipment: equipment?.equipment3d ?? activity.slug,
+  });
 
   const stepActions: Record<StepKey, { label: string; href: string }> = {
     pretest: { label: "Abrir quiz", href: quizUrl },
+    lab3d: { label: "Abrir 3D", href: labUrl },
     case: { label: "Abrir caso", href: caseUrl },
     report: { label: "Crear reporte", href: reportUrl },
     evidence: { label: "Organizar evidencia", href: "/evidencia-piloto" },
@@ -173,7 +184,7 @@ export function GuidedRoutePlanner() {
                 >
                   <span className="block text-sm font-semibold">{item.title}</span>
                   <span className={active ? "mt-1 block text-xs text-slate-600" : "mt-1 block text-xs text-blue-200"}>
-                    {item.duration} - {itemProgress}/5 pasos
+                    {item.duration} - {itemProgress}/{totalSteps} pasos
                   </span>
                 </button>
               );
@@ -235,9 +246,9 @@ export function GuidedRoutePlanner() {
                   return (
                     <article
                       key={step}
-                      className="grid gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm md:grid-cols-[auto_1fr_auto]"
+                      className="grid gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm xl:grid-cols-[1fr_auto]"
                     >
-                      <label className="flex cursor-pointer items-start gap-3 md:col-span-2">
+                      <label className="flex cursor-pointer items-start gap-3">
                         <input
                           type="checkbox"
                           checked={checked}
@@ -258,7 +269,7 @@ export function GuidedRoutePlanner() {
                       </label>
                       <a
                         href={action.href}
-                        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-100"
+                        className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-100 xl:self-center"
                       >
                         {action.label}
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />

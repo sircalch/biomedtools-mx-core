@@ -18,14 +18,14 @@ import { equipmentProfiles } from "../lib/biomed-content";
 export const metadata: Metadata = {
   title: "MedTech Atlas Edu | BioMedTools MX Core",
   description:
-    "Atlas educativo de equipos medicos, fallas frecuentes, checklist tecnico y rutas conectadas a Quiz, Case Simulator y Report Builder.",
+    "Atlas educativo de equipos medicos, fallas frecuentes, checklist tecnico y rutas conectadas a Quiz, 3D Lab, Case Simulator y Report Builder.",
 };
 
 const atlasStats = [
   { label: "Equipos base", value: equipmentProfiles.length, icon: Database },
   { label: "Categorias", value: new Set(equipmentProfiles.map((item) => item.category)).size, icon: Layers },
   { label: "Checklists", value: "30+", icon: ClipboardCheck },
-  { label: "Rutas", value: "Quiz-Caso-Reporte", icon: ArrowRight },
+  { label: "Rutas", value: "Quiz-3D-Caso-Reporte", icon: ArrowRight },
 ];
 
 export default function MedTechAtlasPage() {
@@ -44,7 +44,7 @@ export default function MedTechAtlasPage() {
               </h1>
               <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
                 Consulta fichas de equipos, fallas comunes, competencias y checklist
-                educativo. Cada ficha conecta con Quiz Arena, Case Simulator y
+                educativo. Cada ficha conecta con Quiz Arena, BioMed 3D Lab, Case Simulator y
                 Clinical Report Builder para completar el flujo academico.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">

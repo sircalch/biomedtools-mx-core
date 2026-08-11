@@ -4,6 +4,7 @@ import {
   AlertTriangle,
   ArrowRight,
   BookOpenCheck,
+  Boxes,
   ClipboardCheck,
   FileText,
   Search,
@@ -14,6 +15,7 @@ import { useMemo, useState } from "react";
 
 import {
   buildUrl,
+  BIOMED_3D_LAB_URL,
   CASE_SIMULATOR_URL,
   QUIZ_ARENA_URL,
   REPORT_BUILDER_URL,
@@ -69,6 +71,10 @@ export function MedTechAtlasExplorer({ equipment }: MedTechAtlasExplorerProps) {
   });
   const caseUrl = buildUrl(CASE_SIMULATOR_URL, `/cases/${selected.caseId}`, {
     category: selected.caseCategory,
+  });
+  const labUrl = buildUrl(BIOMED_3D_LAB_URL, "/", {
+    category: selected.quizCategory,
+    equipment: selected.equipment3d,
   });
   const reportUrl = buildUrl(REPORT_BUILDER_URL, "/builder/corrective", {
     activity: "case",
@@ -247,6 +253,15 @@ export function MedTechAtlasExplorer({ equipment }: MedTechAtlasExplorerProps) {
           >
             Practicar quiz
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+          <a
+            href={labUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-blue-200 bg-white px-3 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50"
+          >
+            Abrir 3D
+            <Boxes className="h-4 w-4" aria-hidden="true" />
           </a>
           <a
             href={caseUrl}
