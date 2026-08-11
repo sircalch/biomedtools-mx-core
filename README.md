@@ -37,6 +37,7 @@ Si no se configuran, la app usa esas URLs por defecto.
 - `/biblioteca`: biblioteca educativa de equipos medicos.
 - `/biblioteca/[slug]`: ficha individual por equipo.
 - `/atlas`: MedTech Atlas Edu con busqueda, fichas, checklists y enlaces a Quiz/Case/Report.
+- `/recursos`: recursos abiertos, fuentes oficiales y notas de licencia para el ecosistema.
 - `/historial`: historial local, registro manual de evidencia y exportacion JSON.
 - `/docentes`: guia breve para actividad piloto docente.
 - `/evidencia-piloto`: estructura para guardar evidencia de validacion.
@@ -86,6 +87,7 @@ Los documentos base para validacion humana, actividad piloto y evidencia academi
 - Variables documentadas en `.env.example`.
 - Politica de seguridad en `SECURITY.md`.
 - Metadata Open Graph/Twitter configurada para enlaces compartidos.
+- Trazabilidad de recursos externos en `THIRD_PARTY_NOTICES.md`.
 
 ## Desarrollo
 

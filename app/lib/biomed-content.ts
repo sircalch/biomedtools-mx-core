@@ -7,6 +7,9 @@ export const QUIZ_ARENA_URL =
 export const REPORT_BUILDER_URL =
   process.env.NEXT_PUBLIC_REPORT_BUILDER_URL ||
   "https://clinical-report-builder.vercel.app";
+export const BIOMED_3D_LAB_URL =
+  process.env.NEXT_PUBLIC_BIOMED_3D_LAB_URL ||
+  "https://biomed-3d-engineering-lab.vercel.app";
 
 export function buildUrl(
   base: string,
@@ -327,6 +330,74 @@ export const futureProjects = [
     status: "Fase posterior",
     purpose:
       "Calculadoras educativas de unidades, tiempos, conversiones y parametros tecnicos no clinicos.",
+  },
+] as const;
+
+export const externalResources = [
+  {
+    title: "NIH 3D",
+    category: "Modelos 3D",
+    href: "https://3d.nih.gov/",
+    source: "National Institutes of Health",
+    use: "Referencia para modelos bioscientificos, impresion 3D y visualizacion interactiva.",
+    licenseNote:
+      "Revisar licencia por modelo antes de reutilizar o descargar assets especificos.",
+  },
+  {
+    title: "Health Icons",
+    category: "Iconografia",
+    href: "https://healthicons.org/",
+    source: "Resolve to Save Lives",
+    use: "Iconos de salud usados como recurso visual abierto dentro del ecosistema.",
+    licenseNote: "Iconos abiertos bajo CC0; el sitio se distribuye bajo MIT.",
+  },
+  {
+    title: "Bioicons",
+    category: "Ilustracion cientifica",
+    href: "https://bioicons.com/",
+    source: "Bioicons community",
+    use: "Biblioteca para inspirar diagramas cientificos reutilizables y trazables.",
+    licenseNote: "Cada icono puede tener licencia CC0, CC BY, CC BY-SA, MIT u otra compatible.",
+  },
+  {
+    title: "NIH BioArt Source",
+    category: "Ilustracion biomedica",
+    href: "https://bioart.niaid.nih.gov/",
+    source: "NIAID / NIH",
+    use: "Referencia de ilustraciones biomedicas profesionales y equipos medicos.",
+    licenseNote: "Revisar condiciones de uso de cada recurso antes de incorporarlo al repo.",
+  },
+  {
+    title: "FDA Medical Device Databases",
+    category: "Consulta regulatoria",
+    href: "https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/medical-device-databases",
+    source: "U.S. Food and Drug Administration",
+    use: "Consulta formativa de clasificacion, aprobaciones, 510(k), PMA y datos publicos.",
+    licenseNote: "Uso como referencia externa; no se replica base de datos en el proyecto.",
+  },
+  {
+    title: "AccessGUDID",
+    category: "Identificacion de dispositivos",
+    href: "https://accessgudid.nlm.nih.gov/",
+    source: "National Library of Medicine / FDA",
+    use: "Consulta educativa de identificacion unica de dispositivos medicos.",
+    licenseNote: "Uso como enlace externo de consulta, no como diagnostico ni validacion clinica.",
+  },
+  {
+    title: "WHO Medical Devices Technical Series",
+    category: "Ingenieria biomedica",
+    href: "https://www.who.int/publications/i/item/9789241565479",
+    source: "World Health Organization",
+    use: "Referencia para explicar el rol del ingeniero biomedico en el ciclo de vida del dispositivo.",
+    licenseNote: "Citar fuente y evitar reutilizar contenido extenso sin revisar permisos.",
+  },
+  {
+    title: "OpenStax Anatomy and Physiology 2e",
+    category: "Base academica",
+    href: "https://openstax.org/details/books/anatomy-and-physiology-2e",
+    source: "OpenStax",
+    use: "Referencia abierta para fundamentos de anatomia y fisiologia en ciencias de la salud.",
+    licenseNote: "Libro abierto; revisar atribucion y licencia especifica al reutilizar contenido.",
   },
 ] as const;
 

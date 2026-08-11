@@ -11,6 +11,7 @@ import {
   Home,
   Info,
   Layers,
+  Library,
   Map,
   ShieldCheck,
   Stethoscope,
@@ -27,6 +28,7 @@ const navItems = [
   { label: "Actividades", href: "/actividades", icon: ClipboardCheck },
   { label: "Biblioteca", href: "/biblioteca", icon: Database },
   { label: "Atlas", href: "/atlas", icon: Compass },
+  { label: "Recursos", href: "/recursos", icon: Library },
   { label: "Ruta", href: "/ruta", icon: Map },
   { label: "Historial", href: "/historial", icon: History },
   { label: "Evidencia", href: "/evidencia-piloto", icon: FileText },
@@ -186,6 +188,7 @@ export function CoreShell({ children }: { children: ReactNode }) {
                   <Link href="/actividades">Actividades</Link>
                   <Link href="/biblioteca">Biblioteca</Link>
                   <Link href="/atlas">Atlas</Link>
+                  <Link href="/recursos">Recursos</Link>
                   <Link href="/ruta">Ruta</Link>
                   <Link href="/historial">Historial</Link>
                 </div>

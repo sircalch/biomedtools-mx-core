@@ -9,6 +9,7 @@ import {
   FileText,
   FlaskConical,
   GraduationCap,
+  Library,
   ShieldCheck,
   Stethoscope,
   Users,
@@ -363,6 +364,12 @@ export default function Home() {
                 text: "Actividad piloto, evidencias y rubrica de uso academico.",
                 href: "/docentes",
                 icon: GraduationCap,
+              },
+              {
+                title: "Recursos abiertos",
+                text: "Fuentes oficiales, iconografia, modelos 3D y notas de licencia.",
+                href: "/recursos",
+                icon: Library,
               },
               {
                 title: "Evidencia piloto",
