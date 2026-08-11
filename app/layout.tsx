@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | BioMedTools MX Core",
   },
   description:
-    "Plataforma de aprendizaje, simulacion y documentacion tecnica para Ingenieria Biomedica y Ciencias de la Salud.",
+    "Plataforma de aprendizaje, simulacion 3D, casos, quizzes y documentacion tecnica para Ingenieria Biomedica y Ciencias de la Salud.",
   applicationName: "BioMedTools MX Core",
   authors: [{ name: "Ing. Andres Monreal" }],
   creator: "Ing. Andres Monreal / Topic Tales Biomedica",
@@ -34,12 +34,13 @@ export const metadata: Metadata = {
     "tecnologia medica",
     "educacion biomedica",
     "simulacion clinico tecnica",
+    "laboratorio 3D",
     "reportes biomedicos",
   ],
   openGraph: {
     title: "BioMedTools MX Core",
     description:
-      "Ecosistema educativo para quizzes, casos simulados, atlas tecnico y reportes biomedicos.",
+      "Ecosistema educativo para quizzes, casos simulados, laboratorio 3D, atlas tecnico y reportes biomedicos.",
     url: SITE_URL,
     siteName: "BioMedTools MX Core",
     images: [
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "BioMedTools MX Core",
     description:
-      "Plataforma de aprendizaje, simulacion y documentacion tecnica para Ingenieria Biomedica.",
+      "Plataforma de aprendizaje, simulacion 3D y documentacion tecnica para Ingenieria Biomedica.",
     images: [OG_IMAGE],
   },
 };

@@ -2,6 +2,7 @@ import {
   Activity,
   ArrowRight,
   BookOpenCheck,
+  Box,
   BrainCircuit,
   ClipboardCheck,
   ExternalLink,
@@ -24,6 +25,9 @@ const QUIZ_ARENA_URL =
 const REPORT_BUILDER_URL =
   process.env.NEXT_PUBLIC_REPORT_BUILDER_URL ||
   "https://clinical-report-builder.vercel.app";
+const BIOMED_3D_LAB_URL =
+  process.env.NEXT_PUBLIC_BIOMED_3D_LAB_URL ||
+  "https://biomed-3d-engineering-lab.vercel.app";
 
 function buildUrl(base: string, path = "/", params?: Record<string, string>) {
   const url = new URL(path, base);
@@ -59,6 +63,14 @@ const modules = [
     action: "Crear reporte",
     icon: FileText,
     accent: "teal",
+  },
+  {
+    title: "BioMed 3D Engineering Lab",
+    description: "Explora equipos medicos, subsistemas y senales en 3D.",
+    href: BIOMED_3D_LAB_URL,
+    action: "Abrir laboratorio",
+    icon: Box,
+    accent: "slate",
   },
 ];
 
@@ -114,6 +126,7 @@ const accentClass: Record<string, string> = {
   blue: "border-blue-200 bg-blue-50 text-blue-800",
   cyan: "border-cyan-200 bg-cyan-50 text-cyan-800",
   teal: "border-teal-200 bg-teal-50 text-teal-800",
+  slate: "border-slate-300 bg-slate-100 text-slate-800",
 };
 
 export default function Home() {
@@ -283,7 +296,7 @@ export default function Home() {
           <h2 className="text-base font-semibold text-slate-950">
             Modulos disponibles
           </h2>
-          <div className="mt-3 grid gap-4 md:grid-cols-3">
+          <div className="mt-3 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {modules.map((module) => (
               <article key={module.title} className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
                 <div className="flex items-start gap-4">

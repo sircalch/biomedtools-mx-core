@@ -5,6 +5,7 @@ Landing integradora para conectar tres herramientas educativas:
 - BioMed Quiz Arena
 - BioMed Case Simulator
 - Clinical Report Builder
+- BioMed 3D Engineering Lab
 
 ## Objetivo
 
@@ -17,6 +18,7 @@ NEXT_PUBLIC_SITE_URL=https://biomedtools-mx-core.vercel.app
 NEXT_PUBLIC_CASE_SIMULATOR_URL=https://biomed-case-simulator.vercel.app
 NEXT_PUBLIC_QUIZ_ARENA_URL=https://biomed-quiz-arena.vercel.app
 NEXT_PUBLIC_REPORT_BUILDER_URL=https://clinical-report-builder.vercel.app
+NEXT_PUBLIC_BIOMED_3D_LAB_URL=https://biomed-3d-engineering-lab.vercel.app
 ```
 
 Si no se configuran, la app usa esas URLs por defecto.
