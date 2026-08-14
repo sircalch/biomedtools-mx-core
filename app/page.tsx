@@ -4,12 +4,15 @@ import {
   BookOpenCheck,
   Box,
   BrainCircuit,
+  CheckCircle2,
   ClipboardCheck,
   ExternalLink,
   FileText,
   FlaskConical,
   GraduationCap,
+  Gauge,
   Library,
+  Rocket,
   ShieldCheck,
   Stethoscope,
   Users,
@@ -132,6 +135,33 @@ const accentClass: Record<string, string> = {
   teal: "border-teal-200 bg-teal-50 text-teal-800",
   slate: "border-slate-300 bg-slate-100 text-slate-800",
 };
+
+const moduleStatus = [
+  {
+    title: "Quiz Arena",
+    role: "Repaso y pretest/postest",
+    href: QUIZ_ARENA_URL,
+    signal: "100+ preguntas",
+  },
+  {
+    title: "3D Engineering Lab",
+    role: "Exploracion visual de equipos",
+    href: BIOMED_3D_LAB_URL,
+    signal: "7 modelos GLB",
+  },
+  {
+    title: "Case Simulator",
+    role: "Diagnostico tecnico guiado",
+    href: CASE_SIMULATOR_URL,
+    signal: "Casos por equipo",
+  },
+  {
+    title: "Report Builder",
+    role: "Evidencia y PDF tecnico",
+    href: REPORT_BUILDER_URL,
+    signal: "Prefill desde flujo",
+  },
+];
 
 export default function Home() {
   const guidedPracticeUrl = buildUrl(QUIZ_ARENA_URL, "/quiz/monitoreo-signos-vitales", {
@@ -324,6 +354,62 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-lg border border-blue-100 bg-white p-5 shadow-sm">
+          <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+            <div>
+              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
+                <Gauge className="h-4 w-4" aria-hidden="true" />
+                Panel operativo
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold leading-tight text-slate-950">
+                Ecosistema conectado para una practica completa.
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                La experiencia principal ya no depende de una sola app: cada
+                modulo cumple una parte del ciclo academico y regresa evidencia
+                util para clase, laboratorio o piloto.
+              </p>
+              <a
+                href="/ruta"
+                className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-md bg-blue-700 px-3 py-2 text-sm font-semibold text-white hover:bg-blue-800"
+              >
+                Ver ruta completa
+                <Rocket className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-2">
+              {moduleStatus.map((module, index) => (
+                <a
+                  key={module.title}
+                  href={module.href}
+                  className="group rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50"
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-md bg-white text-sm font-semibold text-blue-800 ring-1 ring-blue-100">
+                      {index + 1}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-teal-100 bg-teal-50 px-2.5 py-1 text-[11px] font-semibold text-teal-800">
+                      <CheckCircle2 className="h-3.5 w-3.5" aria-hidden="true" />
+                      Produccion
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-base font-semibold text-slate-950">
+                    {module.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-5 text-slate-600">
+                    {module.role}
+                  </p>
+                  <p className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
+                    {module.signal}
+                    <ExternalLink className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden="true" />
+                  </p>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 
