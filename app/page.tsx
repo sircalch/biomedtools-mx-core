@@ -404,7 +404,7 @@ export default function Home() {
                     {module.role}
                   </p>
                   <p className="mt-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
-                    {module.signal}
+                    {module.signal} · abrir modulo
                     <ExternalLink className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden="true" />
                   </p>
                 </a>

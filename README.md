@@ -33,7 +33,7 @@ Si no se configuran, la app usa esas URLs por defecto.
 ## Paginas principales
 
 - `/`: dashboard principal de BioMedTools MX Core.
-- Seccion de panel operativo con estado, rol y senal principal de cada modulo.
+- Seccion de panel operativo con estado, rol, senal principal y enlace directo a cada modulo.
 - `/actividades`: actividades guiadas listas para clase o piloto.
 - `/ruta`: rutas Quiz - 3D - Caso - Reporte por tema.
 - `/biblioteca`: biblioteca educativa de equipos medicos.
