@@ -168,6 +168,43 @@ export default function Home() {
     mode: "study",
     difficulty: "all",
   });
+  const featuredRoute = [
+    {
+      label: "1. Quiz",
+      title: "Monitoreo de signos vitales",
+      href: guidedPracticeUrl,
+      icon: BookOpenCheck,
+      detail: "Repaso tecnico inicial",
+    },
+    {
+      label: "2. 3D Lab",
+      title: "Monitor multiparametrico",
+      href: buildUrl(BIOMED_3D_LAB_URL, "/", {
+        category: "monitoreo-signos-vitales",
+        equipment: "patient-monitor",
+      }),
+      icon: Box,
+      detail: "Sensores y subsistemas",
+    },
+    {
+      label: "3. Caso",
+      title: "Monitor sin lectura de SpO2",
+      href: buildUrl(CASE_SIMULATOR_URL, "/cases/monitor-sin-spo2"),
+      icon: BrainCircuit,
+      detail: "Diagnostico guiado",
+    },
+    {
+      label: "4. Reporte",
+      title: "Evidencia correctiva",
+      href: buildUrl(REPORT_BUILDER_URL, "/builder/corrective", {
+        activity: "case",
+        caseId: "monitor-sin-spo2",
+        equipment: "Monitor multiparametrico",
+      }),
+      icon: FileText,
+      detail: "PDF tecnico",
+    },
+  ];
 
   return (
     <div className="min-h-screen">
@@ -324,6 +361,53 @@ export default function Home() {
                 <ArrowRight className="ml-1 h-3.5 w-3.5" aria-hidden="true" />
               </a>
             </aside>
+          </div>
+        </section>
+
+        <section className="mt-6 overflow-hidden rounded-lg border border-blue-100 bg-white shadow-sm">
+          <div className="grid gap-0 lg:grid-cols-[0.86fr_1.14fr]">
+            <div className="bg-blue-950 p-5 text-white md:p-6">
+              <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-cyan-100">
+                <Rocket className="h-4 w-4" aria-hidden="true" />
+                Ruta piloto destacada
+              </p>
+              <h2 className="mt-3 text-2xl font-semibold leading-tight">
+                Monitoreo SpO2: del repaso a la evidencia.
+              </h2>
+              <p className="mt-3 text-sm leading-6 text-blue-100">
+                Secuencia recomendada para validar la plataforma con alumnos:
+                concepto, equipo, diagnostico y reporte final.
+              </p>
+              <a
+                href="/ruta"
+                className="mt-5 inline-flex min-h-10 items-center gap-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-blue-950 hover:bg-blue-50"
+              >
+                Abrir planeador
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+            <div className="grid gap-3 p-4 md:grid-cols-2 md:p-5 xl:grid-cols-4">
+              {featuredRoute.map((step) => (
+                <a
+                  key={step.label}
+                  href={step.href}
+                  className="group rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50"
+                >
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-blue-700">
+                    <step.icon className="h-4 w-4" aria-hidden="true" />
+                    {step.label}
+                  </span>
+                  <h3 className="mt-3 text-sm font-semibold leading-5 text-slate-950">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-xs leading-5 text-slate-600">{step.detail}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-blue-700">
+                    Abrir
+                    <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden="true" />
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </section>
 

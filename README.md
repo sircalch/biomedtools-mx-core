@@ -33,6 +33,7 @@ Si no se configuran, la app usa esas URLs por defecto.
 ## Paginas principales
 
 - `/`: dashboard principal de BioMedTools MX Core.
+- Seccion de ruta piloto destacada para Monitoreo SpO2: Quiz -> 3D Lab -> Caso -> Reporte.
 - Seccion de panel operativo con estado, rol, senal principal y enlace directo a cada modulo.
 - `/actividades`: actividades guiadas listas para clase o piloto.
 - `/ruta`: rutas Quiz - 3D - Caso - Reporte por tema.
